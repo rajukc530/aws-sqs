@@ -1,0 +1,7 @@
+/.idea/
+/target/
+/aws-sqs-poc.iml
+.settings
+/.factorypath
+/.project
+/.classpath
