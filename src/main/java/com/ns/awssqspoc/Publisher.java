@@ -17,9 +17,9 @@ public class Publisher {
     @Value("${cloud.aws.end-point.uri}")
     private String endpoint;
 
-    @Scheduled(fixedRate = 1000)
+    @Scheduled(fixedRate = 30*1000)
     public void scheduleFixedRateTask() {
-        log.info("Sending Message to SQS ");
+        log.info("Sending Message to Publisher SQS ");
         //queueMessagingTemplate.send(endpoint, MessageBuilder.withPayload("Niraj").build());
         queueMessagingTemplate.convertAndSend(endpoint, new Pojo("SomeRandomValue"));
 

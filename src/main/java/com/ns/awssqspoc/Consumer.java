@@ -9,8 +9,8 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class Consumer {
 
-    @SqsListener(value = "spring-boot-poc",deletionPolicy = SqsMessageDeletionPolicy.ON_SUCCESS)
+    @SqsListener(value = "raju-aws-queue",deletionPolicy = SqsMessageDeletionPolicy.ON_SUCCESS)
     public void processMessage(Pojo message) {
-        log.info("Message from SQS {}", message);
+        log.info("Message from Consumer SQS  {}", message);
     }
 }
