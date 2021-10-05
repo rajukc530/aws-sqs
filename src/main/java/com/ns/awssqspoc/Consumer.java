@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class Consumer {
 
-    @SqsListener(value = "raju-aws-queue",deletionPolicy = SqsMessageDeletionPolicy.ON_SUCCESS)
+    @SqsListener(value = "support-dev",deletionPolicy = SqsMessageDeletionPolicy.NEVER)
     public void processMessage(Pojo message) {
         log.info("Message from Consumer SQS  {}", message);
     }
